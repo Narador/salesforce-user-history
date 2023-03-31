@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Changed_By__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Used to indicate who made the change to the User record.</description>
+    <externalId>false</externalId>
+    <label>Changed By</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>User_History</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

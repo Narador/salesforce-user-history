@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Keep_Active__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox indicates that a user should be kept active, despite their last login status.</description>
+    <externalId>false</externalId>
+    <label>Keep Active</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

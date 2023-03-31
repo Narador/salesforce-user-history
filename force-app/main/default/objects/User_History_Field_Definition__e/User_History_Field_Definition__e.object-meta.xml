@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Serves as a means to create a User History record and prevent getting mixed DML errors when using record triggered automation with User.</description>
+    <eventType>HighVolume</eventType>
+    <label>User History Field Definition</label>
+    <pluralLabel>User History Field Definitions</pluralLabel>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
+</CustomObject>
