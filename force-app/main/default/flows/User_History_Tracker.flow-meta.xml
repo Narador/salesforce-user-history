@@ -156,7 +156,7 @@
         </defaultConnector>
         <defaultConnectorLabel>Not Changed</defaultConnectorLabel>
         <rules>
-            <name>Login_Warning_Date_Changed_0_0</name>
+            <name>Login_Warning_Date_Changed</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Login_Warning_Date__c</leftValueReference>
@@ -168,27 +168,11 @@
             <connector>
                 <targetReference>Assign_Login_Warning_Date_Platform_Event_Values</targetReference>
             </connector>
-            <label>Login Warning Date Changed</label>
+            <label>Login Warning Date Changed?</label>
         </rules>
     </decisions>
     <description>Tracks changes to User fields by creating User History records.</description>
     <environments>Default</environments>
-    <formulas>
-        <name>NewIsActiveText</name>
-        <dataType>String</dataType>
-        <expression>IF({!$Record.IsActive},
-&quot;True&quot;,
-&quot;False&quot;
-)</expression>
-    </formulas>
-    <formulas>
-        <name>PrevIsActiveText</name>
-        <dataType>String</dataType>
-        <expression>IF({!$Record.OldActive__c},
-&quot;True&quot;,
-&quot;False&quot;
-)</expression>
-    </formulas>
     <interviewLabel>User History Tracker {!$Flow.CurrentDateTime}</interviewLabel>
     <label>User History Tracker</label>
     <processMetadataValues>
@@ -244,14 +228,6 @@
     </start>
     <status>Active</status>
     <variables>
-        <name>varCurrentUserHistory</name>
-        <dataType>SObject</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>User_History__c</objectType>
-    </variables>
-    <variables>
         <name>varPlatformEvent</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
@@ -266,13 +242,5 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>User_History_Field_Definition__e</objectType>
-    </variables>
-    <variables>
-        <name>varUserHistoryCollection</name>
-        <dataType>SObject</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>User_History__c</objectType>
     </variables>
 </Flow>
